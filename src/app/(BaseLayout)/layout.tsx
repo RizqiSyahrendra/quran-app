@@ -1,6 +1,7 @@
 import '@/app/globals.css'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/Header'
+import BottomBar from '@/components/BottomBar'
 
 export default function BaseLayout({
   children,
@@ -15,6 +16,7 @@ export default function BaseLayout({
         <div className="p-5">
           {children}
         </div>
+        <BottomBar />
       </div>
     </>
   )

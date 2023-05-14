@@ -16,6 +16,7 @@
     --color-menu-font: #8789A3;
     --color-menu-font-active: #672CBC;
     --color-separator: #BBC4CE;
+    --shadow-bottombar: 0px -4px 16px rgba(186, 176, 206, 0.2);
   }
 
   .theme-dark {
@@ -31,6 +32,7 @@
     --color-menu-font: #A19CC5;
     --color-menu-font-active: #A44AFF;
     --color-separator: #BBC4CE;
+    --shadow-bottombar: 0 0 #0000;
   }
 }
 

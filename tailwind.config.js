@@ -24,6 +24,9 @@ const tailwindConfig = {
         "menu-font-active": "var(--color-menu-font-active)",
         "separator": "var(--color-separator)"
       },
+      boxShadow: {
+        "bottombar": "var(--shadow-bottombar)"
+      }
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       //   'gradient-conic':
