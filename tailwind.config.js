@@ -18,7 +18,8 @@ const tailwindConfig = {
         "font-primary": "#FFFFFF",
         "font-secondary": "#A19CC5",
         "font-info": "#A44AFF",
-        "font-neutral1": "#091945"
+        "font-neutral1": "#091945",
+        "separator": "#BBC4CE"
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

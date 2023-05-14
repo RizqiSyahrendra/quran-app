@@ -21,7 +21,7 @@ export default function Home() {
 					/>
 				</div>
 				<div className="flex justify-center">
-					<Link href="#" className="bg-warning" passHref legacyBehavior>
+					<Link href="/home" className="bg-warning" passHref legacyBehavior replace>
 						<Button className="bg-warning text-font-neutral1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full">
 							Mulai
 						</Button>
