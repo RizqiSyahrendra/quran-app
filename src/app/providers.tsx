@@ -8,7 +8,6 @@ export interface ProvidersProps {
 }
 
 export default function Providers(props: ProvidersProps) {
-
     return (
         <ThemeProvider>
             {props.children}

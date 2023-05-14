@@ -2,7 +2,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import Providers from './providers'
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700']})
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
 export const metadata = {
   title: 'Quran App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-primary`}>
+      <body className={`${poppins.className} theme-light bg-primary`}>
         <Providers>
           {children}
         </Providers>

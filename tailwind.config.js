@@ -11,15 +11,18 @@ const tailwindConfig = {
   theme: {
     extend: {
       colors: {
-        "primary": '#040C23',
-        "secondary": '#121931',
-        "info": "#A44AFF",
-        "warning": "#F9B091",
-        "font-primary": "#FFFFFF",
-        "font-secondary": "#A19CC5",
-        "font-info": "#A44AFF",
-        "font-neutral1": "#091945",
-        "separator": "#BBC4CE"
+        "primary": "var(--color-primary)",
+        "secondary": "var(--color-secondary)",
+        "info": "var(--color-info)",
+        "warning": "var(--color-warning)",
+        "font-primary": "var(--color-font-primary)",
+        "font-secondary": "var(--color-font-secondary)",
+        "font-info": "var(--color-font-info)",
+        "button-font1": "var(--color-button-font1)",
+        "header-font": "var(--color-header-font)",
+        "menu-font": "var(--color-menu-font)",
+        "menu-font-active": "var(--color-menu-font-active)",
+        "separator": "var(--color-separator)"
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
