@@ -19,6 +19,7 @@ const tailwindConfig = {
         "font-secondary": "var(--color-font-secondary)",
         "font-info": "var(--color-font-info)",
         "button-font1": "var(--color-button-font1)",
+        "image-font": "var(--color-image-font)",
         "header-font": "var(--color-header-font)",
         "menu-font": "var(--color-menu-font)",
         "menu-font-active": "var(--color-menu-font-active)",

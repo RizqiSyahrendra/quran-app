@@ -14,8 +14,8 @@ import Link from "next/link";
 
 export default function Sidebar() {
     return (
-        <Card className="hidden md:block fixed h-screen md:w-[200px] lg:w-[250px] bg-transparent rounded-none border-r-[1px] border-separator border-opacity-[0.35]">
-            <div className="mb-2 p-4 font-bold text-header-font">
+        <Card className="hidden lg:block fixed h-screen md:w-[180px] lg:w-[250px] bg-transparent rounded-none border-r-[1px] border-separator">
+            <div className="mb-2 px-4 pt-10 font-bold text-header-font text-center">
                 <Typography variant="h5">
                     Qur'an App
                 </Typography>

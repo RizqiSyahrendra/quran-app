@@ -8,7 +8,7 @@ import BookmarkSvg from "../../public/assets/icons/bookmark.svg";
 
 export default function BottomBar() {
     return (
-        <div className="md:hidden fixed w-full flex flex-row items-center justify-between bottom-0 h-[80px] bg-secondary shadow-bottombar">
+        <div className="lg:hidden fixed w-full flex flex-row items-center justify-between bottom-0 h-[80px] md:px-14 bg-secondary shadow-bottombar">
             <BottomBarItem
                 img={{ src: QuranSvg }}
                 href="/home"

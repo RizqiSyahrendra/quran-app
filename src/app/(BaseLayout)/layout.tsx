@@ -11,9 +11,9 @@ export default function BaseLayout({
   return (
     <>
       <Sidebar />
-      <div className="md:pl-[200px] lg:pl-[250px]">
+      <div className="lg:pl-[250px]">
         <Header />
-        <div className="p-5">
+        <div className="px-6 md:px-14 lg:px-20 pt-4 md:py-10">
           {children}
         </div>
         <BottomBar />

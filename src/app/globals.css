@@ -12,6 +12,7 @@
     --color-font-secondary: #8789A3;
     --color-font-info: #863ED5;
     --color-button-font1: #FFFFFF;
+    --color-image-font: #FFFFFF;
     --color-header-font: #672CBC;
     --color-menu-font: #8789A3;
     --color-menu-font-active: #672CBC;
@@ -28,10 +29,11 @@
     --color-font-secondary: #A19CC5;
     --color-font-info: #A44AFF;
     --color-button-font1: #091945;
+    --color-image-font: #FFFFFF;
     --color-header-font: #FFFFFF;
     --color-menu-font: #A19CC5;
     --color-menu-font-active: #A44AFF;
-    --color-separator: #BBC4CE;
+    --color-separator: rgba(187, 196, 206, 0.35);
     --shadow-bottombar: 0 0 #0000;
   }
 }
