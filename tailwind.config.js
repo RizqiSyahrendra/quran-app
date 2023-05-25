@@ -23,7 +23,10 @@ const tailwindConfig = {
         "header-font": "var(--color-header-font)",
         "menu-font": "var(--color-menu-font)",
         "menu-font-active": "var(--color-menu-font-active)",
-        "separator": "var(--color-separator)"
+        "tab-active": "var(--color-tab-active)",
+        "tab-inactive": "var(--color-tab-inactive)",
+        "separator": "var(--color-separator)",
+        "separator2": "var(--color-separator2)",
       },
       boxShadow: {
         "bottombar": "var(--shadow-bottombar)"

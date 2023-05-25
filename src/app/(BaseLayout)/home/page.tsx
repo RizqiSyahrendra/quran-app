@@ -1,5 +1,7 @@
+import TabsQuran from "@/components/module/home/TabsQuran";
 import { Metadata } from "next";
 import Image from "next/image";
+
 
 export const metadata: Metadata = {
     title: 'Qur\'an app - Beranda'
@@ -12,6 +14,8 @@ export default function Home() {
             <div className="text-lg font-medium text-font-secondary">
                 Assalamualaikum
             </div>
+
+            {/* Banner */}
             <div className="mt-6 relative">
                 {/* Image for mobile */}
                 <Image
@@ -53,6 +57,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            <TabsQuran />
         </div>
     );
 }

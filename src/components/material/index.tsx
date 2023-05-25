@@ -10,6 +10,11 @@ import {
     ListItemPrefix,
     ListItemSuffix,
     Chip,
+    Tabs,
+    TabsHeader,
+    TabsBody,
+    Tab,
+    TabPanel,
 } from "@material-tailwind/react";
 
 export {
@@ -22,4 +27,9 @@ export {
     ListItemPrefix,
     ListItemSuffix,
     Chip,
+    Tabs,
+    TabsHeader,
+    TabsBody,
+    Tab,
+    TabPanel,
 }
