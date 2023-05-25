@@ -4,21 +4,46 @@ import '@testing-library/jest-dom';
 
 describe('Home', () => {
 
-    it('renders a title', () => {
+    it('render a title', () => {
         render(<Home />);
 
-        const title = screen.getByTestId('title');
-        expect(title).toBeInTheDocument();
-        expect(title.innerHTML).toBe("Qur'an App");
+        const el = screen.getByTestId('title');
+        expect(el).toBeInTheDocument();
+        expect(el.innerHTML).toBe("Qur'an App");
     });
 
-    it('renders a description', () => {
+    it('render a description', () => {
         render(<Home />);
 
-        const title = screen.getByTestId('desc');
-        expect(title).toBeInTheDocument();
-        expect(title.innerHTML).toBe("Baca Qur'an kapan pun dan di mana pun");
+        const el = screen.getByTestId('desc');
+        expect(el).toBeInTheDocument();
+        expect(el.innerHTML).toBe("Baca Qur'an kapan pun dan di mana pun");
     });
 
+    it('render a center image', () => {
+        render(<Home />);
+
+        const el = screen.getByRole('img');
+        expect(el).toBeInTheDocument();
+        expect(el).toHaveAttribute("src");
+        expect(el).toHaveAttribute("alt");
+        expect(el.getAttribute("src")).toContain("quran-landing-logo.png");
+        expect(el.getAttribute("alt")).toContain("quran");
+    });
+
+    it('render a start button', () => {
+        render(<Home />);
+
+        const el = screen.getByRole('button');
+        expect(el).toBeInTheDocument();
+        expect(el).toHaveAttribute("href");
+        expect(el.getAttribute("href")).toContain("home");
+        expect(el.innerHTML.toLowerCase()).toContain("mulai");
+    });
+
+    it('render homepage unchanged', () => {
+        const { container } = render(<Home />);
+        expect(container).toMatchSnapshot();
+    });
 
 });

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home render homepage unchanged 1`] = `
+<div>
+  <main
+    class="flex min-h-screen flex-col items-center justify-between py-[50px]"
+  >
+    <div
+      class="text-center"
+    >
+      <div
+        class="text-font-primary text-2xl font-bold"
+        data-testid="title"
+      >
+        Qur'an App
+      </div>
+      <div
+        class="text-font-secondary text-lg mt-4 w-full px-10 md:px-0"
+        data-testid="desc"
+      >
+        Baca Qur'an kapan pun dan di mana pun
+      </div>
+      <div
+        class="flex justify-center mt-[90px] md:mt-[40px]"
+      >
+        <img
+          alt="quran"
+          data-nimg="1"
+          decoding="async"
+          height="370"
+          loading="lazy"
+          src="/_next/image?url=%2Fassets%2Fimages%2Fquran-landing-logo.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fassets%2Fimages%2Fquran-landing-logo.png&w=256&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fquran-landing-logo.png&w=640&q=75 2x"
+          style="color: transparent;"
+          width="234"
+        />
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <button
+          class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none bg-warning text-button-font1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full"
+          href="/home"
+          type="button"
+        >
+          Mulai
+        </button>
+      </div>
+    </div>
+  </main>
+</div>
+`;
