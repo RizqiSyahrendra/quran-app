@@ -1,5 +1,6 @@
 "use client";
 
+import { iconRegistry } from "@/utils/image";
 import Image from "next/image";
 import { IRowSuratProps } from "./RowSurat.types";
 
@@ -18,7 +19,7 @@ export default function RowSurat(props: IRowSuratProps) {
                 <div className="text-font-primary font-medium flex items-center justify-center px-4 relative">
                     {num}
                     <Image
-                        src="/assets/icons/number-container.png"
+                        src={iconRegistry.numberContainer}
                         alt="number container"
                         width={36}
                         height={36}

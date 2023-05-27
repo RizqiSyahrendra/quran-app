@@ -1,4 +1,5 @@
 import { Button } from '@/components/material'
+import { ImageRegistry } from '@/utils/image'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -14,7 +15,7 @@ export default function Home() {
 				</div>
 				<div className="flex justify-center mt-[90px] md:mt-[40px]">
 					<Image
-						src="/assets/images/quran-landing-logo.png"
+						src={ImageRegistry.quranLanding}
 						alt="quran"
 						width={314 - 80}
 						height={450 - 80}

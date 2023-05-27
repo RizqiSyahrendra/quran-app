@@ -1,5 +1,6 @@
 "use client";
 
+import { iconRegistry } from "@/utils/image";
 import Image from "next/image";
 import { IRowJuzProps } from "./RowJuz.types";
 
@@ -15,7 +16,7 @@ export default function RowJuz(props: IRowJuzProps) {
                 <div className="text-font-primary font-medium flex items-center justify-center px-4 relative">
                     {num}
                     <Image
-                        src="/assets/icons/number-container.png"
+                        src={iconRegistry.numberContainer}
                         alt="number container"
                         width={36}
                         height={36}

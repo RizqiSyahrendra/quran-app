@@ -1,4 +1,6 @@
+import Header from "@/components/Header";
 import { Metadata } from "next";
+import { Fragment } from "react";
 
 export const metadata: Metadata = {
     title: 'Qur\'an app - Read'
@@ -6,12 +8,12 @@ export const metadata: Metadata = {
 
 export default function Read() {
     return (
-        <div>
-            <div className="text-lg font-medium text-font-secondary">
-                Assalamualaikum
-            </div>
+        <Fragment>
+            <Header 
+                title="Al - Fatihah"
+            />
 
             
-        </div>
+        </Fragment>
     );
 }
