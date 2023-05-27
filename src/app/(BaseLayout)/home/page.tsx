@@ -1,6 +1,8 @@
+import Header from "@/components/Header";
 import TabsQuran from "@/components/module/home/TabsQuran";
 import { Metadata } from "next";
 import Image from "next/image";
+import { Fragment } from "react";
 
 
 export const metadata: Metadata = {
@@ -10,7 +12,11 @@ export const metadata: Metadata = {
 export default function Home() {
 
     return (
-        <div>
+        <Fragment>
+            <Header 
+                title="Qur'an App"
+            />
+
             <div className="text-lg font-medium text-font-secondary">
                 Assalamualaikum
             </div>
@@ -59,6 +65,6 @@ export default function Home() {
             </div>
 
             <TabsQuran />
-        </div>
+        </Fragment>
     );
 }
