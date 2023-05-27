@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import TabsQuran from "@/components/module/home/TabsQuran";
-import { iconRegistry, ImageRegistry } from "@/utils/image";
+import { IconRegistry, ImageRegistry } from "@/utils/image";
 import { Metadata } from "next";
 import Image from "next/image";
 import { Fragment } from "react";
@@ -51,7 +51,7 @@ export default function Home() {
                 <div className="absolute bottom-0 text-image-font ml-5 mb-4">
                     <div className="flex flex-row font-semibold mb-6 md:mb-4 lg:mb-6">
                         <Image
-                            src={iconRegistry.book}
+                            src={IconRegistry.book}
                             alt="last read"
                             width={20}
                             height={20}

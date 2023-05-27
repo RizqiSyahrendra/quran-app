@@ -1,4 +1,4 @@
-import { iconRegistry } from "@/utils/image";
+import { IconRegistry } from "@/utils/image";
 import Image from "next/image";
 
 export default function Header({
@@ -20,10 +20,10 @@ export default function Header({
     hideInDesktopScreen?: boolean
 }) {
     return (
-        <div className={`flex pb-4 text-xl text-header-font font-bold ${hideInDesktopScreen ? 'md:hidden' : ''}`}>
+        <div className={`flex pt-2 pb-4 mb-4 text-xl text-header-font font-bold ${hideInDesktopScreen ? 'md:hidden' : ''}`}>
             {isBackButtonVisible && (
                 <Image
-                    src={iconRegistry.back}
+                    src={IconRegistry.back}
                     alt="back"
                     width={24}
                     height={24}

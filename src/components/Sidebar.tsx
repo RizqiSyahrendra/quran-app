@@ -8,7 +8,7 @@ import {
     ListItemPrefix,
 } from "@/components/material";
 import Link from "next/link";
-import { iconComponent } from "@/utils/image";
+import { IconComponent } from "@/utils/image";
 
 export default function Sidebar() {
     return (
@@ -21,17 +21,17 @@ export default function Sidebar() {
             <List className="text-font-primary font-medium">
                 <SidebarItem
                     title="Beranda"
-                    img={{ src: iconComponent.quranSvg }}
+                    img={{ src: IconComponent.quranSvg }}
                     href="/home"
                 />
                 <SidebarItem
                     title="Ayat hari ini"
-                    img={{ src: iconComponent.lampSvg }}
+                    img={{ src: IconComponent.lampSvg }}
                     href="/todays-verse"
                 />
                 <SidebarItem
                     title="Tersimpan"
-                    img={{ src: iconComponent.bookmarkSvg }}
+                    img={{ src: IconComponent.bookmarkSvg }}
                     href="/bookmark"
                 />
             </List>

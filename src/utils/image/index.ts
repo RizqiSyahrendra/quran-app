@@ -2,13 +2,13 @@ import quranSvg from "../../../public/assets/icons/quran.svg";
 import lampSvg from "../../../public/assets/icons/lamp.svg";
 import bookmarkSvg from "../../../public/assets/icons/bookmark.svg";
 
-export const iconComponent = {
+export const IconComponent = {
     quranSvg,
     lampSvg,
     bookmarkSvg,
 }
 
-export const iconRegistry = {
+export const IconRegistry = {
     back: "/assets/icons/back.png",
     numberContainer: "/assets/icons/number-container.png",
     book: "/assets/icons/book.svg",
