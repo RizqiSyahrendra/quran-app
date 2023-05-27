@@ -8,6 +8,7 @@ import {
     TabPanel,
 } from "@/components/material";
 import { useState } from "react";
+import RowJuz from "./RowJuz";
 import RowSurat from "./RowSurat";
 import { IJenisSurat } from "./RowSurat.types";
 import { TTabQuranName, ITabQuran } from "./TabsQuran.types";
@@ -48,14 +49,14 @@ export default function TabsQuran() {
             </TabsHeader>
             <TabsBody>
                 <TabPanel value={"surat"} className="px-0">
-                    <RowSurat 
+                    <RowSurat
                         num={1}
                         nama="Al - Fatihah"
                         jenis={IJenisSurat.makkiyah}
                         jumlahAyat={'7'}
                         namaArabic={'الفاتحة'}
                     />
-                    <RowSurat 
+                    <RowSurat
                         num={2}
                         nama="Al - Fatihah"
                         jenis={IJenisSurat.makkiyah}
@@ -63,8 +64,14 @@ export default function TabsQuran() {
                         namaArabic={'الفاتحة'}
                     />
                 </TabPanel>
-                <TabPanel value={"juz"}>
-
+                <TabPanel value={"juz"} className="px-0">
+                    {[...Array(30)].map((item, idx) => (
+                        <RowJuz
+                            key={idx}
+                            num={idx + 1}
+                            nama={`Juz ${idx + 1}`}
+                        />
+                    ))}
                 </TabPanel>
             </TabsBody>
         </Tabs>
