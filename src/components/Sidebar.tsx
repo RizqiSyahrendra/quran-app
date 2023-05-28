@@ -15,7 +15,7 @@ export default function Sidebar() {
         <Card className="hidden lg:block fixed h-screen md:w-[180px] lg:w-[250px] bg-transparent rounded-none border-r-[1px] border-separator">
             <div className="mb-2 px-4 pt-10 font-bold text-header-font text-center">
                 <Typography variant="h5">
-                    Qur'an App
+                    Qur&apos;an App
                 </Typography>
             </div>
             <List className="text-font-primary font-medium">

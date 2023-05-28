@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <Fragment>
             <Header 
-                title="Qur'an App"
+                title="Qur&apos;an App"
                 isBackButtonVisible={false}
                 hideInDesktopScreen={true}
             />

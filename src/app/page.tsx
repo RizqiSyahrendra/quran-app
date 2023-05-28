@@ -9,9 +9,9 @@ export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between py-[50px]">
 			<div className="text-center">
-				<div className="text-font-primary text-2xl font-bold" data-testid="title">Qur'an App</div>
+				<div className="text-font-primary text-2xl font-bold" data-testid="title">Qur&apos;an App</div>
 				<div className="text-font-secondary text-lg mt-4 w-full px-10 md:px-0" data-testid="desc">
-					Baca Qur'an kapan pun dan di mana pun
+					Baca Qur&apos;an kapan pun dan di mana pun
 				</div>
 				<div className="flex justify-center mt-[90px] md:mt-[40px]">
 					<Image
