@@ -1,5 +1,8 @@
+"use client";
+
 import { IconRegistry } from "@/utils/image";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Header({
     title,
@@ -19,8 +22,15 @@ export default function Header({
      */
     hideInDesktopScreen?: boolean
 }) {
+
+    const router = useRouter();
+
+    function onPressBack() {
+        router.back();
+    }
+
     return (
-        <div className={`flex pt-2 pb-3 mb-4 text-xl text-header-font font-bold ${hideInDesktopScreen ? 'md:hidden' : ''}`}>
+        <div onClick={onPressBack} className={`flex pt-2 pb-3 mb-4 text-xl text-header-font font-bold ${hideInDesktopScreen ? 'md:hidden' : ''}`}>
             {isBackButtonVisible && (
                 <Image
                     src={IconRegistry.back}
