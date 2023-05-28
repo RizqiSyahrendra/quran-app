@@ -27,6 +27,7 @@ const tailwindConfig = {
         "tab-inactive": "var(--color-tab-inactive)",
         "separator": "var(--color-separator)",
         "separator2": "var(--color-separator2)",
+        "separator3": "var(--color-separator3)",
       },
       boxShadow: {
         "bottombar": "var(--shadow-bottombar)"

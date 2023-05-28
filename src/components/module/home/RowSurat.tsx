@@ -1,5 +1,6 @@
 "use client";
 
+import SeparatorCircle from "@/components/SeparatorCircle";
 import { IconRegistry } from "@/utils/image";
 import Image from "next/image";
 import { IRowSuratProps } from "./RowSurat.types";
@@ -33,7 +34,7 @@ export default function RowSurat(props: IRowSuratProps) {
                     </div>
                     <div className="flex flex-row text-font-secondary font-medium text-xs uppercase">
                         {jenis}
-                        <div className="rounded-full w-[5px] h-[5px] bg-separator mx-2 my-[6px]"></div>
+                        <SeparatorCircle />
                         {jumlahAyat} Ayat
                     </div>
                 </div>

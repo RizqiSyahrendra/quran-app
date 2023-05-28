@@ -11,6 +11,7 @@ export const IconComponent = {
 export const IconRegistry = {
     back: "/assets/icons/back.png",
     numberContainer: "/assets/icons/number-container.png",
+    bismillah: "/assets/icons/bismillah.png",
     book: "/assets/icons/book.svg",
 }
 

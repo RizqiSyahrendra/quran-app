@@ -20,7 +20,7 @@ export default function Header({
     hideInDesktopScreen?: boolean
 }) {
     return (
-        <div className={`flex pt-2 pb-4 mb-4 text-xl text-header-font font-bold ${hideInDesktopScreen ? 'md:hidden' : ''}`}>
+        <div className={`flex pt-2 pb-3 mb-4 text-xl text-header-font font-bold ${hideInDesktopScreen ? 'md:hidden' : ''}`}>
             {isBackButtonVisible && (
                 <Image
                     src={IconRegistry.back}
