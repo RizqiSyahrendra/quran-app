@@ -11,9 +11,11 @@ export default function Ayat(props: IAyatProps) {
     } = props;
 
     return (
-        <div className="flex flex-row justify-end text-font-primary py-2">
+        <div className="flex flex-row justify-end text-font-primary py-2 font-quran">
             <NumberContainer number={num} />
-            {ayatArabic}
+            <span className="text-xl">
+                {ayatArabic}
+            </span>
         </div>
     );
 }

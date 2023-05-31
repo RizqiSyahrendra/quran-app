@@ -10,6 +10,9 @@ const tailwindConfig = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        quran: "Lpmq"
+      },
       colors: {
         "primary": "var(--color-primary)",
         "secondary": "var(--color-secondary)",
