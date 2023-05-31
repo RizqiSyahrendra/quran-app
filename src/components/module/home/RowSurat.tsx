@@ -1,8 +1,7 @@
 "use client";
 
+import NumberContainer from "@/components/NumberContainer";
 import SeparatorCircle from "@/components/SeparatorCircle";
-import { IconRegistry } from "@/utils/image";
-import Image from "next/image";
 import { IRowSuratProps } from "./RowSurat.types";
 
 export default function RowSurat(props: IRowSuratProps) {
@@ -17,17 +16,7 @@ export default function RowSurat(props: IRowSuratProps) {
     return (
         <div className="flex flex-row justify-between border-b-[1px] border-separator2 pb-4 mb-2">
             <div className="flex flex-row">
-                <div className="text-font-primary font-medium flex items-center justify-center px-4 relative">
-                    {num}
-                    <Image
-                        src={IconRegistry.numberContainer}
-                        alt="number container"
-                        width={36}
-                        height={36}
-                        quality={100}
-                        className="absolute"
-                    />
-                </div>
+                <NumberContainer size="lg" number={`${num}`} />
                 <div className="pl-2">
                     <div className="text-font-primary font-medium">
                         {nama}
