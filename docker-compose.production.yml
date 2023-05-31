@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    image: quran-app
+    build: 
+      dockerfile: ./Dockerfile.production
+    ports:
+      - 3000:3000
+    volumes: 
+      - ./public:/app/public
+      - ./src:/apps/src
