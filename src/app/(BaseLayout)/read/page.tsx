@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: 'Qur\'an app - Read'
 }
 
+
 export default function Read() {
     return (
         <Fragment>
@@ -23,12 +24,16 @@ export default function Read() {
                 jumlahAyat="7"
             />
 
-            <div className="flex flex-row flex-wrap justify-end py-6">
-                <Ayat 
-                    num="1"
-                    ayatArabic="الْحَمْدُ لِلَّهِ رَبِّ الْعٰلَمِينَ"
-                />
-            </div>
+            {/* <div className="container py-6 text-right leading-[50px]">
+                {data.ayahs.map((item, idx) => (
+                    <Ayat
+                        key={idx}
+                        num={`${idx + 1}`}
+                        ayatArabic={item.arab}
+                    />
+                ))}
+            </div> */}
+
         </Fragment>
     );
 }

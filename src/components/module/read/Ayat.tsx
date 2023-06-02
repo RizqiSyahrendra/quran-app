@@ -1,6 +1,6 @@
 "use client";
 
-import NumberContainer from "@/components/NumberContainer";
+import { convertNumToArabic } from "@/utils/helper";
 import { IAyatProps } from "./Ayat.types";
 
 export default function Ayat(props: IAyatProps) {
@@ -11,11 +11,13 @@ export default function Ayat(props: IAyatProps) {
     } = props;
 
     return (
-        <div className="flex flex-row justify-end text-font-primary py-2 font-quran">
-            <NumberContainer number={num} />
-            <span className="text-xl">
+        <>
+            <span className="text-font-primary text-xl font-quran cursor-pointer">
                 {ayatArabic}
             </span>
-        </div>
+            <span className="mx-2 h-2 rounded-full font-quran text-font-primary text-4xl">
+                {convertNumToArabic(num)}
+            </span>
+        </>
     );
 }

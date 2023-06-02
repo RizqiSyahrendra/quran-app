@@ -16,7 +16,7 @@ export default function RowSurat(props: IRowSuratProps) {
     return (
         <div className="flex flex-row justify-between border-b-[1px] border-separator2 pb-4 mb-2">
             <div className="flex flex-row">
-                <NumberContainer size="lg" number={`${num}`} />
+                <NumberContainer size="lg" num={`${num}`} />
                 <div className="pl-2">
                     <div className="text-font-primary font-medium">
                         {nama}

@@ -23,6 +23,7 @@
     --color-menu-font-active: #672CBC;
     --color-separator: #BBC4CE;
     --color-separator2: rgba(187, 196, 206, 0.35);
+    --color-separator3: rgba(255, 255, 255, 0.35);
     --color-tab-active: #A44AFF;
     --color-tab-inactive: rgba(135, 137, 163, 0.1);
     --shadow-bottombar: 0px -4px 16px rgba(186, 176, 206, 0.2);
@@ -49,6 +50,7 @@
     --shadow-bottombar: 0 0 #0000;
   }
 }
+
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
