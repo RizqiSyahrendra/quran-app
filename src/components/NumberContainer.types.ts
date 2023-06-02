@@ -1,4 +1,4 @@
 export interface INumberContainerProps {
-    number: string
+    num: string
     size?: "sm" | "lg"
 }

@@ -4,7 +4,7 @@ import { INumberContainerProps } from "./NumberContainer.types";
 
 export default function NumberContainer(props: INumberContainerProps) {
     const {
-        number,
+        num,
         size = "sm",
     } = props;
 
@@ -12,7 +12,7 @@ export default function NumberContainer(props: INumberContainerProps) {
 
     return (
         <div className="text-font-primary font-medium flex items-center justify-center px-4 relative">
-            {number}
+            {num}
             <Image
                 src={IconRegistry.numberContainer}
                 alt="number container"
