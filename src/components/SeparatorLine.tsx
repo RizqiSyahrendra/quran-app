@@ -15,5 +15,14 @@ export default function SeparatorLine(props: ISeparatorProps) {
 }
 
 function getSeparatorColor(color: ISeparatorLineColor = "1") {
-    return `bg-separator${color === "1" ? "" : color}`;
+    switch (color) {
+        case "2":
+            return "bg-separator2";
+
+        case "3":
+            return "bg-separator3";
+    
+        default:
+            return "bg-separator";
+    }
 }
