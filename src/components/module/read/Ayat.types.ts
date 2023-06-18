@@ -1,5 +1,6 @@
+import { IQuranWord } from "@/utils/api/api.types"
+
 export interface IAyatProps {
-    num: string
-    ayatArabic: string
-    ayatTranslate?: string
+    text: string
+    type: IQuranWord["char_type_name"]
 }
