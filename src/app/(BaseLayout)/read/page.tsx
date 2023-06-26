@@ -1,22 +1,19 @@
-import Header from "@/components/Header";
-import ContainerAyat from "@/components/module/read/ContainerAyat";
-import { Metadata } from "next";
-import { Fragment } from "react";
+"use client";
 
-export const metadata: Metadata = {
-    title: 'Qur\'an app - Read'
-}
+import ContainerAyat from "@/components/module/read/ContainerAyat";
+import HeaderContainerAyat from "@/components/module/read/HeaderContainerAyat";
+import { Fragment } from "react";
 
 
 export default function Read() {
     return (
         <Fragment>
-            <Header
-                title="Al - Fatihah"
+            <HeaderContainerAyat 
+                halaman="1"
+                juz="1"
+                surat="Al - Baqarah"
             />
-
             <ContainerAyat />
-
         </Fragment>
     );
 }

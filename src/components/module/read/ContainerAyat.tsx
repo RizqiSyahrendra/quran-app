@@ -2,7 +2,7 @@
 
 import { api } from "@/utils/api/api";
 import { IQuranWord } from "@/utils/api/api.types";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Ayat from "./Ayat";
 
 export default function ContainerAyat() {
@@ -31,7 +31,7 @@ export default function ContainerAyat() {
 
     return (
         <div className="container" dir="rtl">
-            <div className="md:w-2/3 md:mx-auto px-1 md:px-4 mt-4 border-[1px] border-separator rounded-lg">
+            <div className="md:w-2/3 md:mx-auto px-1 md:px-4 mt-14 md:mt-4 rounded-lg">
                 {arrData.map((row, rowIdx) => (
                     <div key={rowIdx} className={`flex justify-between flex-wrap py-2 ${(rowIdx !== arrData.length - 1) ? 'border-b-[1px] border-separator' : ''}`}>
                         {row.map((word, wordIdx) => (
