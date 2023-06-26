@@ -2,17 +2,23 @@
 
 import { api } from "@/utils/api/api";
 import { IQuranWord } from "@/utils/api/api.types";
+import { Button } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import Ayat from "./Ayat";
+import { IContainerAyatProps } from "./ContainerAyat.types";
 
-export default function ContainerAyat() {
+export default function ContainerAyat(props: IContainerAyatProps) {
+    const {
+        page,
+        onPageChanged,
+    } = props;
+
     const [rowsData, setRowsData] = useState<Record<number, Array<IQuranWord>>>({})
     const arrData = Object.values(rowsData)
-    const [page, setPage] = useState(50)
 
     useEffect(() => {
         _fetchData()
-    }, [])
+    }, [page])
 
     async function _fetchData() {
         const dataQuran = await api.fetchQuranByPage({ page });
@@ -29,6 +35,17 @@ export default function ContainerAyat() {
         }
     }
 
+    function onPageDecreased() {
+        let decrPage = page - 1;
+        if (decrPage <= 0) return;
+        onPageChanged?.(decrPage);
+    }
+
+    function onPageIncreased() {
+        let incrPage = page + 1;
+        onPageChanged?.(incrPage);
+    }
+
     return (
         <div className="container" dir="rtl">
             <div className="md:w-2/3 md:mx-auto px-1 md:px-4 mt-14 md:mt-4 rounded-lg">
@@ -43,6 +60,11 @@ export default function ContainerAyat() {
                         ))}
                     </div>
                 ))}
+            </div>
+
+            <div className="mt-4 flex justify-center">
+                <Button disabled={page === 1} onClick={onPageDecreased} size="sm" className="bg-info mx-1">{`<`}</Button>
+                <Button onClick={onPageIncreased} size="sm" className="bg-info mx-1">{`>`}</Button>
             </div>
         </div>
     );
