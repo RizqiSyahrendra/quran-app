@@ -1,6 +1,7 @@
 'use client';
 
 import { ThemeProvider } from "@/components/material";
+import { RecoilRoot } from "recoil";
 import { ReactNode } from "react";
 
 export interface ProvidersProps {
@@ -10,7 +11,9 @@ export interface ProvidersProps {
 export default function Providers(props: ProvidersProps) {
     return (
         <ThemeProvider>
-            {props.children}
+            <RecoilRoot>
+                {props.children}
+            </RecoilRoot>
         </ThemeProvider>
     );
 }

@@ -1,4 +1,4 @@
-export interface IQuranPage {
+export interface IQuranPageResponse {
     verses: Array<IQuranVerse>
     pagination: IQuranPagination
 }
@@ -46,4 +46,26 @@ export interface IQuranPagination {
     next_page: any
     total_pages: number
     total_records: number
+}
+
+export interface IChaptersResponse {
+    chapters: IChapter[]
+}
+
+export interface IChapter {
+    id: number
+    revelation_place: string
+    revelation_order: number
+    bismillah_pre: boolean
+    name_simple: string
+    name_complex: string
+    name_arabic: string
+    verses_count: number
+    pages: number[]
+    translated_name: ITranslatedName
+}
+
+export interface ITranslatedName {
+    language_name: string
+    name: string
 }
