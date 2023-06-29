@@ -2,25 +2,25 @@
 
 import { ListItem } from "@/components/material";
 import Link from "next/link";
-import QuranSvg from "../../public/assets/icons/quran.svg";
-import LampSvg from "../../public/assets/icons/lamp.svg";
-import BookmarkSvg from "../../public/assets/icons/bookmark.svg";
+import { IconComponent } from "@/utils/image";
 
 export default function BottomBar() {
     return (
-        <div className="lg:hidden fixed w-full flex flex-row items-center justify-between bottom-0 h-[80px] md:px-14 bg-secondary shadow-bottombar">
-            <BottomBarItem
-                img={{ src: QuranSvg }}
-                href="/home"
-            />
-            <BottomBarItem
-                img={{ src: LampSvg }}
-                href="/todays-verse"
-            />
-            <BottomBarItem
-                img={{ src: BookmarkSvg }}
-                href="/bookmark"
-            />
+        <div className="fixed w-full left-0 bottom-4 px-4">
+            <div className="flex flex-row items-center justify-around lg:hidden h-[60px] md:px-14 bg-secondary shadow-bottombar rounded-full">
+                <BottomBarItem
+                    img={{ src: IconComponent.quranSvg }}
+                    href="/home"
+                />
+                <BottomBarItem
+                    img={{ src: IconComponent.lampSvg }}
+                    href="/todays-verse"
+                />
+                <BottomBarItem
+                    img={{ src: IconComponent.bookmarkSvg }}
+                    href="/bookmark"
+                />
+            </div>
         </div>
     );
 }
