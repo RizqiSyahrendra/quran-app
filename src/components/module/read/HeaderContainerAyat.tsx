@@ -55,15 +55,15 @@ export default function HeaderContainerAyat(props: IHeaderContainerAyatProps) {
                             className="self-center mr-4 cursor-pointer"
                         />
                         <div>
-                            Juz 1
+                            {!!juz && `Juz ${convertNumToArabic(juz)}`}
                         </div>
                     </div>
                     <div className="flex-1 text-right">
-                        Al - Baqarah
+                        {surat}
                     </div>
                 </div>
                 <div className="text-center absolute top-0 left-1/2">
-                    1
+                    {convertNumToArabic(halaman)}
                 </div>
             </div>
         </div>

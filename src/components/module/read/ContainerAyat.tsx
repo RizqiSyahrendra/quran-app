@@ -54,7 +54,7 @@ export default function ContainerAyat(props: IContainerAyatProps) {
             {!isLoadingVerses && (
                 <div className="mt-4 flex justify-center">
                     <Button disabled={page === 1} onClick={onPageDecreased} size="sm" className="bg-info mx-1">{`<`}</Button>
-                    <Button onClick={onPageIncreased} size="sm" className="bg-info mx-1">{`>`}</Button>
+                    <Button disabled={page === 604} onClick={onPageIncreased} size="sm" className="bg-info mx-1">{`>`}</Button>
                 </div>
             )}
         </div>
