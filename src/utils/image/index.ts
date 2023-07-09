@@ -1,11 +1,13 @@
 import quranSvg from "../../../public/assets/icons/quran.svg";
 import lampSvg from "../../../public/assets/icons/lamp.svg";
 import bookmarkSvg from "../../../public/assets/icons/bookmark.svg";
+import homeSvg from "../../../public/assets/icons/home.svg";
 
 export const IconComponent = {
     quranSvg,
     lampSvg,
     bookmarkSvg,
+    homeSvg,
 }
 
 export const IconRegistry = {

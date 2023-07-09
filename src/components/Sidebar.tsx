@@ -21,8 +21,13 @@ export default function Sidebar() {
             <List className="text-font-primary font-medium">
                 <SidebarItem
                     title="Beranda"
-                    img={{ src: IconComponent.quranSvg }}
+                    img={{ src: IconComponent.homeSvg }}
                     href="/home"
+                />
+                <SidebarItem
+                    title="Baca"
+                    img={{ src: IconComponent.quranSvg }}
+                    href="/read"
                 />
                 <SidebarItem
                     title="Ayat hari ini"
