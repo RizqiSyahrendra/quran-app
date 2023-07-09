@@ -54,7 +54,7 @@ export interface IChaptersResponse {
 
 export interface IChapter {
     id: number
-    revelation_place: string
+    revelation_place: "makkah" | "madinah"
     revelation_order: number
     bismillah_pre: boolean
     name_simple: string

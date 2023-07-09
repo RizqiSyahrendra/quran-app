@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/Loader";
 import {
     Tabs,
     TabsHeader,
@@ -7,26 +8,44 @@ import {
     Tab,
     TabPanel,
 } from "@/components/material";
-import { useState } from "react";
+import { api } from "@/utils/api/api";
+import { IChapter } from "@/utils/api/api.types";
+import { useEffect, useState } from "react";
 import RowJuz from "./RowJuz";
 import RowSurat from "./RowSurat";
 import { IJenisSurat } from "./RowSurat.types";
 import { TTabQuranName, ITabQuran } from "./TabsQuran.types";
 
+const tabList: ITabQuran[] = [
+    {
+        key: "surat",
+        label: "Surat",
+    },
+    {
+        key: "juz",
+        label: "Juz",
+    }
+]
 
 export default function TabsQuran() {
     const [activeTab, setActiveTab] = useState<TTabQuranName>('surat')
+    const [isLoading, setLoading] = useState(false)
+    const [chapters, setChapters] = useState<IChapter[]>([])
 
-    const tabList: ITabQuran[] = [
-        {
-            key: "surat",
-            label: "Surat",
-        },
-        {
-            key: "juz",
-            label: "Juz",
+    useEffect(() => {
+        _fetchData();
+    }, [])
+
+
+    async function _fetchData() {
+        setLoading(true);
+        const data = await api.fetchChapters();
+        setLoading(false);
+
+        if (!!data) {
+            setChapters(data.chapters);
         }
-    ]
+    }
 
     return (
         <Tabs value={activeTab}>
@@ -49,23 +68,24 @@ export default function TabsQuran() {
             </TabsHeader>
             <TabsBody>
                 <TabPanel value={"surat"} className="px-0">
-                    <RowSurat
-                        num={1}
-                        nama="Al - Fatihah"
-                        jenis={IJenisSurat.makkiyah}
-                        jumlahAyat={'7'}
-                        namaArabic={'الفاتحة'}
+                    <Loader
+                        className="h-10 w-10 mt-5"
+                        useContainer={true}
+                        isVisible={isLoading}
                     />
-                    <RowSurat
-                        num={2}
-                        nama="Al - Fatihah"
-                        jenis={IJenisSurat.makkiyah}
-                        jumlahAyat={'7'}
-                        namaArabic={'الفاتحة'}
-                    />
+
+                    {chapters.map((chap, idx) => (
+                        <RowSurat
+                            num={idx+1}
+                            nama={chap.name_complex}
+                            jenis={chap.revelation_place === "makkah" ? IJenisSurat.makkiyah : IJenisSurat.madaniyah}
+                            jumlahAyat={`${chap.verses_count}`}
+                            namaArabic={chap.name_arabic}
+                        />
+                    ))}
                 </TabPanel>
                 <TabPanel value={"juz"} className="px-0">
-                    {[...Array(30)].map((item, idx) => (
+                    {chapters.length > 0 && [...Array(30)].map((item, idx) => (
                         <RowJuz
                             key={idx}
                             num={idx + 1}
