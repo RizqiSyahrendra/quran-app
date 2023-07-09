@@ -30,6 +30,7 @@
     --color-separator3: rgba(255, 255, 255, 0.35);
     --color-tab-active: #A44AFF;
     --color-tab-inactive: rgba(135, 137, 163, 0.1);
+    --color-loader: #8789A3;
     --shadow-bottombar: 0px -4px 16px rgba(186, 176, 206, 0.2);
   }
 
@@ -51,6 +52,7 @@
     --color-separator3: rgba(255, 255, 255, 0.35);
     --color-tab-active: #A44AFF;
     --color-tab-inactive: rgba(135, 137, 163, 0.1);
+    --color-loader: #A19CC5;
     --shadow-bottombar: 0 0 #0000;
   }
 }

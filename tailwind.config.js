@@ -32,6 +32,7 @@ const tailwindConfig = {
         "separator": "var(--color-separator)",
         "separator2": "var(--color-separator2)",
         "separator3": "var(--color-separator3)",
+        "loader": "var(--color-loader)",
       },
       boxShadow: {
         "bottombar": "var(--shadow-bottombar)"
