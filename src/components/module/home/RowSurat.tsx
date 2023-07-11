@@ -11,10 +11,11 @@ export default function RowSurat(props: IRowSuratProps) {
         namaArabic,
         jenis,
         jumlahAyat,
+        onClick
     } = props;
 
     return (
-        <div className="flex flex-row justify-between border-b-[1px] border-separator2 pb-4 mb-2">
+        <div onClick={onClick} className="flex flex-row justify-between border-b-[1px] border-separator2 pb-4 mb-2 cursor-pointer">
             <div className="flex flex-row">
                 <NumberContainer size="lg" num={`${num}`} />
                 <div className="pl-2">

@@ -10,6 +10,7 @@ import {
 } from "@/components/material";
 import { api } from "@/utils/api/api";
 import { IChapter } from "@/utils/api/api.types";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import RowJuz from "./RowJuz";
 import RowSurat from "./RowSurat";
@@ -31,6 +32,7 @@ export default function TabsQuran() {
     const [activeTab, setActiveTab] = useState<TTabQuranName>('surat')
     const [isLoading, setLoading] = useState(false)
     const [chapters, setChapters] = useState<IChapter[]>([])
+    const router = useRouter()
 
     useEffect(() => {
         _fetchData();
@@ -45,6 +47,10 @@ export default function TabsQuran() {
         if (!!data) {
             setChapters(data.chapters);
         }
+    }
+
+    function onClickRowSurat(chapter: IChapter) {
+        router.push(`/read/?page=${chapter.pages?.[0] ?? 1}`);
     }
 
     return (
@@ -76,11 +82,13 @@ export default function TabsQuran() {
 
                     {chapters.map((chap, idx) => (
                         <RowSurat
+                            key={idx}
                             num={idx+1}
                             nama={chap.name_complex}
                             jenis={chap.revelation_place === "makkah" ? IJenisSurat.makkiyah : IJenisSurat.madaniyah}
                             jumlahAyat={`${chap.verses_count}`}
                             namaArabic={chap.name_arabic}
+                            onClick={() => onClickRowSurat(chap)}
                         />
                     ))}
                 </TabPanel>

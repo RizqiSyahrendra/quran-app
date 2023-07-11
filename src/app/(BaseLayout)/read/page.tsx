@@ -9,14 +9,12 @@ import { Fragment, useState } from "react";
 export default function Read({
     searchParams
 }: {
-    searchParams: { surat: string, juz: string }
+    searchParams: { page: number }
 }) {
     const [page, setPage] = useState(1)
     const { chapters, isLoadingChapters } = useChaptersData()
     const [chapterNum, setChapterNum] = useState<number>(0)
     const [juzNum, setJuzNum] = useState<number>(0)
-
-    console.log(searchParams);
 
     const onVersesDataChanged: IContainerAyatProps["onDataChanged"] = (verses) => {
         if (verses?.length > 0) {

@@ -10,4 +10,5 @@ export interface IRowSuratProps {
     namaArabic: string
     jenis: IJenisSurat
     jumlahAyat: string
+    onClick?: () => void
 }
