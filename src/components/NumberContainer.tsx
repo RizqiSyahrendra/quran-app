@@ -11,7 +11,7 @@ export default function NumberContainer(props: INumberContainerProps) {
     let widthHeight = size === "sm" ? 30 : 36;
 
     return (
-        <div className="text-font-primary font-medium flex items-center justify-center px-4 relative">
+        <div className="text-xs text-font-primary font-medium flex items-center justify-center px-4 relative">
             {num}
             <Image
                 src={IconRegistry.numberContainer}
