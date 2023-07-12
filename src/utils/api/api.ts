@@ -1,4 +1,6 @@
-import { IChaptersResponse, IQuranPageResponse } from "./api.types";
+import { IChaptersResponse, IJuzInfoResponse, IQuranPageResponse } from "./api.types";
+
+const host = "https://api.quran.com/api/v4";
 
 export const api = {
 
@@ -9,7 +11,7 @@ export const api = {
             page = 1
         } = param;
 
-        const res = await fetch(`https://api.quran.com/api/v4/verses/by_page/${page}?word_fields=text_indopak&words=true`);
+        const res = await fetch(`${host}/verses/by_page/${page}?word_fields=text_indopak&words=true`);
         if (res.ok) {
             const resData = await res.json() as IQuranPageResponse;
             return resData;
@@ -19,9 +21,21 @@ export const api = {
     },
 
     async fetchChapters() {
-        const res = await fetch(`https://api.quran.com/api/v4/chapters?language=id`);
+        const res = await fetch(`${host}/chapters?language=id`);
         if (res.ok) {
             const resData = await res.json() as IChaptersResponse;
+            return resData;
+        } else {
+            return null;
+        }
+    },
+
+    async fetchJuzInfo(param: {
+        juz: number
+    }) {
+        const res = await fetch(`${host}/verses/by_juz/${param.juz}`);
+        if (res.ok) {
+            const resData = await res.json() as IJuzInfoResponse;
             return resData;
         } else {
             return null;

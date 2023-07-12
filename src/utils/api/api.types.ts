@@ -69,3 +69,20 @@ export interface ITranslatedName {
     language_name: string
     name: string
 }
+
+export interface IJuzeVerse {
+    id: number
+    verse_number: number
+    verse_key: string
+    hizb_number: number
+    rub_el_hizb_number: number
+    ruku_number: number
+    manzil_number: number
+    sajdah_number: any
+    page_number: number
+    juz_number: number
+}
+
+export interface IJuzInfoResponse {
+    verses: IJuzeVerse[]
+}

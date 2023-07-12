@@ -33,3 +33,9 @@ export function parseChapterNumber(num: any) {
     const result = parseInt(num);
     return !result ? 1 : result;
 }
+
+export function parseJuzNumber(num: any) {
+    let juzNum = parseInt(num);
+    juzNum = !juzNum ? 1 : juzNum;
+    return juzNum >= 1 && juzNum <= 30 ? juzNum : 1;
+}
