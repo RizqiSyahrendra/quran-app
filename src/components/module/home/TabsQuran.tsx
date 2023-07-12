@@ -10,6 +10,7 @@ import {
 } from "@/components/material";
 import { api } from "@/utils/api/api";
 import { IChapter } from "@/utils/api/api.types";
+import { convertNumToArabic } from "@/utils/helper";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import RowJuz from "./RowJuz";
@@ -32,6 +33,7 @@ export default function TabsQuran() {
     const [activeTab, setActiveTab] = useState<TTabQuranName>('surat')
     const [isLoading, setLoading] = useState(false)
     const [chapters, setChapters] = useState<IChapter[]>([])
+    const [juzLoading, setJuzLoading] = useState<Record<number, boolean>>({})
     const router = useRouter()
 
     useEffect(() => {
@@ -51,6 +53,22 @@ export default function TabsQuran() {
 
     function onClickRowSurat(chapter: IChapter) {
         router.push(`/read/?startPage=${chapter.pages?.[0] ?? 1}`);
+    }
+
+    async function onClickRowJuz(juz: number) {
+        const tempJuzLoading = { ...juzLoading };
+        if (!!tempJuzLoading?.[juz]) return;
+        tempJuzLoading[juz] = true;
+        setJuzLoading(tempJuzLoading);
+
+        const juzInfoRequest = await api.fetchJuzInfo({ juz });
+        tempJuzLoading[juz] = false;
+        setJuzLoading(tempJuzLoading);
+        if (!!juzInfoRequest && ((juzInfoRequest?.verses?.length ?? 0) > 0)) {
+            const { verses } = juzInfoRequest;
+            const page = verses?.[0]?.page_number ?? 1;
+            router.push(`/read/?startPage=${page}`);
+        }
     }
 
     return (
@@ -83,7 +101,7 @@ export default function TabsQuran() {
                     {chapters.map((chap, idx) => (
                         <RowSurat
                             key={idx}
-                            num={idx+1}
+                            num={idx + 1}
                             nama={chap.name_complex}
                             jenis={chap.revelation_place === "makkah" ? IJenisSurat.makkiyah : IJenisSurat.madaniyah}
                             jumlahAyat={`${chap.verses_count}`}
@@ -97,7 +115,9 @@ export default function TabsQuran() {
                         <RowJuz
                             key={idx}
                             num={idx + 1}
-                            nama={`Juz ${idx + 1}`}
+                            nama={`Juz ${convertNumToArabic(`${idx + 1}`)}`}
+                            isLoading={!!juzLoading?.[idx + 1]}
+                            onClick={() => onClickRowJuz(idx + 1)}
                         />
                     ))}
                 </TabPanel>
