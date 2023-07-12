@@ -28,3 +28,8 @@ export function convertNumToArabic(num: string): string {
     
     return arabicNumber;
 }
+
+export function parseChapterNumber(num: any) {
+    const result = parseInt(num);
+    return !result ? 1 : result;
+}

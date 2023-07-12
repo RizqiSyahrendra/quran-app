@@ -50,7 +50,7 @@ export default function TabsQuran() {
     }
 
     function onClickRowSurat(chapter: IChapter) {
-        router.push(`/read/?page=${chapter.pages?.[0] ?? 1}`);
+        router.push(`/read/?startPage=${chapter.pages?.[0] ?? 1}`);
     }
 
     return (

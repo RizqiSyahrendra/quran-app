@@ -3,15 +3,16 @@
 import ContainerAyat from "@/components/module/read/ContainerAyat";
 import { IContainerAyatProps } from "@/components/module/read/ContainerAyat.types";
 import HeaderContainerAyat from "@/components/module/read/HeaderContainerAyat";
+import { parseChapterNumber } from "@/utils/helper";
 import { useChaptersData } from "@/utils/hooks/data/useChaptersData";
 import { Fragment, useState } from "react";
 
 export default function Read({
     searchParams
 }: {
-    searchParams: { page: number }
+    searchParams: { startPage: number }
 }) {
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(parseChapterNumber(searchParams?.startPage))
     const { chapters, isLoadingChapters } = useChaptersData()
     const [chapterNum, setChapterNum] = useState<number>(0)
     const [juzNum, setJuzNum] = useState<number>(0)
