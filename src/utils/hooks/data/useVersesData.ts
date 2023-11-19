@@ -9,6 +9,7 @@ export function useVersesData(page: number) {
     const [rowsData, setRowsData] = useState<Record<number, Array<IAyatProps>>>({})
     const [verses, setVerses] = useState<IQuranVerse[]>([])
     const [isLoadingVerses, setLoadingVerses] = useState(true)
+    
     const verseWords = Object.values(rowsData)
 
     useEffect(() => {
@@ -24,9 +25,12 @@ export function useVersesData(page: number) {
             setVerses(dataQuran.verses);
 
             const rows: typeof rowsData = {};
+
             for (const verse of dataQuran.verses) {
+                let surahKey = verse.verse_key?.split(":")?.[0] ?? "";
+                
                 //insert Bismillah
-                if (verse.verse_number === 1 && verse.ruku_number !== 1) {
+                if (verse.verse_number === 1 && surahKey !== "1") {
                     let lineBismillah = (verse.words[0]?.line_number ?? 0) - 1;
                     rows[lineBismillah] = BismillahWordsData.map(word => ({
                         text: word.text_indopak,
@@ -40,7 +44,7 @@ export function useVersesData(page: number) {
                     rows[word.line_number]?.push(ayat) ?? (rows[word.line_number] = [ayat]);
                 }
             }
-
+            
             setRowsData(rows);
         }
     }
