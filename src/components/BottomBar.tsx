@@ -7,11 +7,15 @@ import { routeNames } from "@/utils/routes";
 
 export default function BottomBar() {
     return (
-        <div className="fixed w-full left-0 bottom-4 px-4">
+        <div className="fixed z-10 w-full left-0 bottom-4 px-4">
             <div className="flex flex-row items-center justify-around lg:hidden h-[60px] md:px-14 bg-secondary shadow-bottombar rounded-full">
                 <BottomBarItem
-                    img={{ src: IconComponent.quranSvg }}
+                    img={{ src: IconComponent.homeSvg }}
                     href={routeNames("home")}
+                />
+                <BottomBarItem
+                    img={{ src: IconComponent.quranSvg }}
+                    href={routeNames("read")}
                 />
                 <BottomBarItem
                     img={{ src: IconComponent.lampSvg }}
@@ -19,7 +23,7 @@ export default function BottomBar() {
                 />
                 <BottomBarItem
                     img={{ src: IconComponent.bookmarkSvg }}
-                    href={routeNames("read")}
+                    href={routeNames("bookmark")}
                 />
             </div>
         </div>
