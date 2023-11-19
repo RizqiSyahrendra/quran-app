@@ -20,7 +20,7 @@ export default function Home() {
                 hideInDesktopScreen={true}
             />
 
-            <div className="text-lg font-medium text-font-secondary">
+            <div className="text-lg font-medium text-font-secondary mt-8">
                 Assalamualaikum
             </div>
 
