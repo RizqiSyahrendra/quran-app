@@ -5,6 +5,7 @@ import { IconRegistry } from "@/utils/image";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { IHeaderContainerAyatProps } from "./HeaderContainerAyat.types";
+import { routeNames } from "@/utils/routes";
 
 export default function HeaderContainerAyat(props: IHeaderContainerAyatProps) {
     const {
@@ -16,7 +17,7 @@ export default function HeaderContainerAyat(props: IHeaderContainerAyatProps) {
     const router = useRouter()
 
     function onPressBack() {
-        router.back();
+        router.replace(routeNames("home"));
     }
 
     return (
