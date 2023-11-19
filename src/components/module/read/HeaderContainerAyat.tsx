@@ -53,6 +53,7 @@ export default function HeaderContainerAyat(props: IHeaderContainerAyatProps) {
                             height={24}
                             quality={100}
                             className="self-center mr-4 cursor-pointer"
+                            onClick={onPressBack}
                         />
                         <div>
                             {!!juz && `Juz ${convertNumToArabic(juz)}`}
