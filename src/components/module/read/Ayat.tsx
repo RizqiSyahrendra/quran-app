@@ -10,7 +10,7 @@ export default function Ayat(props: IAyatProps) {
 
     return (
         <>
-            <span className={`text-font-primary cursor-pointer ${(type === "word" || type === "start") ? "font-quranIndopak text-md md:text-2xl" : "font-quranLpmq text-xl md:text-2xl"}`}>
+            <span className={`text-font-primary cursor-pointer ${(type === "word" || type === "start") ? "font-quranIndopak text-2xl md:text-3xl" : "font-quranLpmq text-2xl md:text-3xl"}`}>
                 {text}
             </span>
         </>

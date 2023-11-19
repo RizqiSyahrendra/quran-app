@@ -44,12 +44,12 @@ export default function ContainerAyat(props: IContainerAyatProps) {
 
     return (
         <div className="container" dir="rtl">
-            <div className="md:w-2/3 md:mx-auto px-1 md:px-4 mt-14 md:mt-4 rounded-lg">
+            <div className="md:w-2/3 md:mx-auto mt-2 md:mt-4 rounded-lg">
                 {verseWords.map((row, rowIdx) => {
                     let isJustifyCenter = row?.[0].type === "start" || page === 1 || page === 2;
 
                     return (
-                        <div key={rowIdx} className={`flex ${isJustifyCenter ? "justify-center space-x-4" : "justify-between"} flex-wrap py-2 ${(rowIdx !== verseWords.length - 1) ? 'border-b-[1px] border-separator' : ''}`}>
+                        <div key={rowIdx} className={`flex ${isJustifyCenter ? "justify-center space-x-1" : "justify-between"} flex-wrap py-2 ${(rowIdx !== verseWords.length - 1) ? 'border-b-[1px] border-separator' : ''}`}>
                             {row.map((word, wordIdx) => (
                                 <Ayat
                                     key={wordIdx}

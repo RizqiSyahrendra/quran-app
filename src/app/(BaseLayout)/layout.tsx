@@ -11,7 +11,7 @@ export default function BaseLayout({
     <>
       <Sidebar />
       <div className="lg:pl-[250px]">
-        <div className="px-6 md:px-14 lg:px-20 pt-2 pb-32">
+        <div className="px-4 md:px-10 lg:px-20 pt-2 pb-32">
           {children}
         </div>
         <BottomBar />

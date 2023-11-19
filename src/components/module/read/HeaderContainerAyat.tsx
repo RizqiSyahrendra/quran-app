@@ -21,7 +21,7 @@ export default function HeaderContainerAyat(props: IHeaderContainerAyatProps) {
     }
 
     return (
-        <div className="bg-primary w-full px-6 md:px-14 lg:px-20 py-6">
+        <div className="bg-primary w-full md:px-14 lg:px-20 py-6">
             <div className="hidden md:flex justify-between text-font-primary font-semibold">
                 <div className="flex-1 flex">
                     <Image
