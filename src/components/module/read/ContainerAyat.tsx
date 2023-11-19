@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Ayat from "./Ayat";
 
 import { IContainerAyatProps } from "./ContainerAyat.types";
+import Loader from "@/components/Loader";
 
 export default function ContainerAyat(props: IContainerAyatProps) {
     const {
@@ -31,6 +32,16 @@ export default function ContainerAyat(props: IContainerAyatProps) {
         onPageChanged?.(incrPage);
     }
 
+    if (isLoadingVerses) {
+        return (
+            <Loader
+                className="h-10 w-10 mt-20"
+                useContainer={true}
+                isVisible={true}
+            />
+        )
+    }
+
     return (
         <div className="container" dir="rtl">
             <div className="md:w-2/3 md:mx-auto px-1 md:px-4 mt-14 md:mt-4 rounded-lg">
@@ -51,12 +62,10 @@ export default function ContainerAyat(props: IContainerAyatProps) {
                 })}
             </div>
 
-            {!isLoadingVerses && (
-                <div className="mt-4 flex justify-center">
-                    <Button disabled={page === 1} onClick={onPageDecreased} size="sm" className="bg-info mx-1">{`<`}</Button>
-                    <Button disabled={page === 604} onClick={onPageIncreased} size="sm" className="bg-info mx-1">{`>`}</Button>
-                </div>
-            )}
+            <div className="mt-4 flex justify-center">
+                <Button disabled={page === 1} onClick={onPageDecreased} size="sm" className="bg-info mx-1">{`<`}</Button>
+                <Button disabled={page === 604} onClick={onPageIncreased} size="sm" className="bg-info mx-1">{`>`}</Button>
+            </div>
         </div>
     );
 }

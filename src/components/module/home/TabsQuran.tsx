@@ -31,7 +31,7 @@ const tabList: ITabQuran[] = [
 
 export default function TabsQuran() {
     const [activeTab, setActiveTab] = useState<TTabQuranName>('surat')
-    const [isLoading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(true)
     const [chapters, setChapters] = useState<IChapter[]>([])
     const [juzLoading, setJuzLoading] = useState<Record<number, boolean>>({})
     const router = useRouter()
@@ -71,12 +71,22 @@ export default function TabsQuran() {
         }
     }
 
+    if (isLoading) {
+        return (
+            <Loader
+                className="h-10 w-10 mt-10"
+                useContainer={true}
+                isVisible={true}
+            />
+        )
+    }
+
     return (
         <Tabs value={activeTab}>
             <TabsHeader
                 className="rounded-none bg-transparent border-b-2 border-tab-inactive p-0 mt-16"
                 indicatorProps={{
-                    className: "bg-transparent border-b-2 border-tab-active shadow-none rounded-none",
+                    className: "bg-gray-900/10 border-b-2 border-tab-active shadow-none rounded-none",
                 }}
             >
                 {tabList.map(({ key, label }, idx) => (
@@ -92,12 +102,6 @@ export default function TabsQuran() {
             </TabsHeader>
             <TabsBody>
                 <TabPanel value={"surat"} className="px-0">
-                    <Loader
-                        className="h-10 w-10 mt-5"
-                        useContainer={true}
-                        isVisible={isLoading}
-                    />
-
                     {chapters.map((chap, idx) => (
                         <RowSurat
                             key={idx}
