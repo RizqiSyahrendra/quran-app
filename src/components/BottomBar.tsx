@@ -3,6 +3,7 @@
 import { ListItem } from "@/components/material";
 import Link from "next/link";
 import { IconComponent } from "@/utils/image";
+import { routeNames } from "@/utils/routes";
 
 export default function BottomBar() {
     return (
@@ -10,15 +11,15 @@ export default function BottomBar() {
             <div className="flex flex-row items-center justify-around lg:hidden h-[60px] md:px-14 bg-secondary shadow-bottombar rounded-full">
                 <BottomBarItem
                     img={{ src: IconComponent.quranSvg }}
-                    href="/home"
+                    href={routeNames("home")}
                 />
                 <BottomBarItem
                     img={{ src: IconComponent.lampSvg }}
-                    href="/todays-verse"
+                    href={routeNames("todays_verse")}
                 />
                 <BottomBarItem
                     img={{ src: IconComponent.bookmarkSvg }}
-                    href="/bookmark"
+                    href={routeNames("read")}
                 />
             </div>
         </div>

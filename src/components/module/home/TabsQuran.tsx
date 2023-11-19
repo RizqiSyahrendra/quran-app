@@ -17,6 +17,7 @@ import RowJuz from "./RowJuz";
 import RowSurat from "./RowSurat";
 import { IJenisSurat } from "./RowSurat.types";
 import { TTabQuranName, ITabQuran } from "./TabsQuran.types";
+import { routeNames } from "@/utils/routes";
 
 const tabList: ITabQuran[] = [
     {
@@ -52,7 +53,9 @@ export default function TabsQuran() {
     }
 
     function onClickRowSurat(chapter: IChapter) {
-        router.push(`/read/?startPage=${chapter.pages?.[0] ?? 1}`);
+        router.push(routeNames("read", {
+            startPage: chapter.pages?.[0] ?? 1
+        }));
     }
 
     async function onClickRowJuz(juz: number) {
@@ -67,7 +70,9 @@ export default function TabsQuran() {
         if (!!juzInfoRequest && ((juzInfoRequest?.verses?.length ?? 0) > 0)) {
             const { verses } = juzInfoRequest;
             const page = verses?.[0]?.page_number ?? 1;
-            router.push(`/read/?startPage=${page}`);
+            router.push(routeNames("read", {
+                startPage: page
+            }));
         }
     }
 

@@ -1,5 +1,6 @@
 import { Button } from '@/components/material'
 import { ImageRegistry } from '@/utils/image'
+import { routeNames } from '@/utils/routes'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -22,7 +23,7 @@ export default function Landing() {
                     />
                 </div>
                 <div className="flex justify-center">
-                    <Link href="/home" className="bg-warning" passHref legacyBehavior replace>
+                    <Link href={routeNames("home")} className="bg-warning" passHref legacyBehavior replace>
                         <Button className="bg-warning text-button-font1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full">
                             Mulai
                         </Button>

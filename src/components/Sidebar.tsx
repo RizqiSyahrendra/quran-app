@@ -9,6 +9,7 @@ import {
 } from "@/components/material";
 import Link from "next/link";
 import { IconComponent } from "@/utils/image";
+import { routeNames } from "@/utils/routes";
 
 export default function Sidebar() {
     return (
@@ -22,22 +23,22 @@ export default function Sidebar() {
                 <SidebarItem
                     title="Beranda"
                     img={{ src: IconComponent.homeSvg }}
-                    href="/home"
+                    href={routeNames("home")}
                 />
                 <SidebarItem
                     title="Baca"
                     img={{ src: IconComponent.quranSvg }}
-                    href="/read"
+                    href={routeNames("read")}
                 />
                 <SidebarItem
                     title="Ayat hari ini"
                     img={{ src: IconComponent.lampSvg }}
-                    href="/todays-verse"
+                    href={routeNames("todays_verse")}
                 />
                 <SidebarItem
                     title="Tersimpan"
                     img={{ src: IconComponent.bookmarkSvg }}
-                    href="/bookmark"
+                    href={routeNames("bookmark")}
                 />
             </List>
         </Card>
