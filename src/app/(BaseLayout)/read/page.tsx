@@ -5,6 +5,8 @@ import { IContainerAyatProps } from "@/components/module/read/ContainerAyat.type
 import HeaderContainerAyat from "@/components/module/read/HeaderContainerAyat";
 import { parseChapterNumber } from "@/utils/helper";
 import { useChaptersData } from "@/utils/hooks/data/useChaptersData";
+import { routeNames } from "@/utils/routes";
+import { useRouter } from "next/navigation";
 import { Fragment, useState } from "react";
 
 export default function Read({
@@ -12,10 +14,15 @@ export default function Read({
 }: {
     searchParams: { startPage: number }
 }) {
-    const [page, setPage] = useState(parseChapterNumber(searchParams?.startPage))
+    const router = useRouter()
+    const page = parseChapterNumber(searchParams?.startPage)
     const { chapters, isLoadingChapters } = useChaptersData()
     const [chapterNum, setChapterNum] = useState<number>(0)
     const [juzNum, setJuzNum] = useState<number>(0)
+
+    const goToPage = (p: number) => {
+        router.push(routeNames("read", { startPage: p }));
+    }
 
     const onVersesDataChanged: IContainerAyatProps["onDataChanged"] = (verses) => {
         if (verses?.length > 0) {
@@ -37,7 +44,7 @@ export default function Read({
             />
             <ContainerAyat
                 page={page}
-                onPageChanged={(p) => setPage(p)}
+                onPageChanged={(p) => goToPage(p)}
                 onDataChanged={onVersesDataChanged}
             />
         </Fragment>
