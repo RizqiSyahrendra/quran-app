@@ -1,13 +1,8 @@
 import Header from "@/components/Header";
 import Banner from "@/components/module/home/Banner";
 import TabsQuran from "@/components/module/home/TabsQuran";
-import { Metadata } from "next";
 import { Fragment } from "react";
 
-
-export const metadata: Metadata = {
-    title: 'Qur\'an app - Beranda'
-}
 
 export default function Home() {
 
