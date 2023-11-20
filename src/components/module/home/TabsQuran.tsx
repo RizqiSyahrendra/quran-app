@@ -89,9 +89,9 @@ export default function TabsQuran() {
     return (
         <Tabs value={activeTab}>
             <TabsHeader
-                className="rounded-none bg-transparent border-b-2 border-tab-inactive p-0 mt-16"
+                className="rounded-none bg-transparent border-b-2 border-tab-inactive p-0 mt-12"
                 indicatorProps={{
-                    className: "bg-gray-900/10 border-b-2 border-tab-active shadow-none rounded-none",
+                    className: "bg-gray-900/10 border-b-2 border-tab-active shadow-none rounded-none bg-transparent",
                 }}
             >
                 {tabList.map(({ key, label }, idx) => (

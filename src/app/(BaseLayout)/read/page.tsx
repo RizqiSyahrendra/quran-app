@@ -19,6 +19,7 @@ export default function Read({
     const { chapters, isLoadingChapters } = useChaptersData()
     const [chapterNum, setChapterNum] = useState<number>(0)
     const [juzNum, setJuzNum] = useState<number>(0)
+    const currentChapter = chapters?.[chapterNum];
 
     const goToPage = (p: number) => {
         router.push(routeNames("read", { startPage: p }));
@@ -40,10 +41,11 @@ export default function Read({
             <HeaderContainerAyat
                 halaman={`${page}`}
                 juz={`${juzNum > 0 ? juzNum : ''}`}
-                surat={chapters?.[chapterNum]?.name_simple ?? ''}
+                surat={currentChapter?.name_simple ?? ''}
             />
             <ContainerAyat
                 page={page}
+                chapter={currentChapter}
                 onPageChanged={(p) => goToPage(p)}
                 onDataChanged={onVersesDataChanged}
             />

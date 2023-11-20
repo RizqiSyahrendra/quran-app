@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { IAyatProps } from "@/components/module/read/Ayat.types";
+import { IAyatData } from "@/components/module/read/Ayat.types";
 import { api } from "@/utils/api/api";
 import { IQuranVerse } from "@/utils/api/api.types";
 
 export function useVersesData(page: number) {
-    const [rowsData, setRowsData] = useState<Record<number, Array<IAyatProps>>>({})
+    const [rowsData, setRowsData] = useState<Record<number, Array<IAyatData>>>({})
     const [verses, setVerses] = useState<IQuranVerse[]>([])
     const [isLoadingVerses, setLoadingVerses] = useState(true)
     
@@ -34,13 +34,14 @@ export function useVersesData(page: number) {
                     let lineBismillah = (verse.words[0]?.line_number ?? 0) - 1;
                     rows[lineBismillah] = BismillahWordsData.map(word => ({
                         text: word.text_indopak,
-                        type: "start"
+                        type: "start",
+                        verse_key: verse.verse_key,
                     }));
                 }
 
                 //insert verse words
                 for (const word of verse.words) {
-                    const ayat: IAyatProps = { text: word.text_indopak, type: word.char_type_name };
+                    const ayat: IAyatData = { text: word.text_indopak, type: word.char_type_name, verse_key: verse.verse_key };
                     rows[word.line_number]?.push(ayat) ?? (rows[word.line_number] = [ayat]);
                 }
             }
