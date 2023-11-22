@@ -1,4 +1,4 @@
-import { IChaptersResponse, IJuzInfoResponse, IQuranPageResponse } from "./api.types";
+import { IChaptersResponse, IJuzInfoResponse, IQuranPageResponse, IRandomVerseResponse } from "./api.types";
 
 const host = process.env.NEXT_PUBLIC_API_HOST;
 
@@ -36,6 +36,16 @@ export const api = {
         const res = await fetch(`${host}/verses/by_juz/${param.juz}`);
         if (res.ok) {
             const resData = await res.json() as IJuzInfoResponse;
+            return resData;
+        } else {
+            return null;
+        }
+    },
+
+    async fetchRandomVerse() {
+        const res = await fetch(`${host}/verses/random?word_fields=text_indopak&words=true&translations=33`);
+        if (res.ok) {
+            const resData = await res.json() as IRandomVerseResponse;
             return resData;
         } else {
             return null;

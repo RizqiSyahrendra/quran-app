@@ -17,6 +17,16 @@ export interface IQuranVerse {
     words: Array<IQuranWord>
 }
 
+export interface IQuranVerseTranslation {
+    id: number
+    resource_id: number
+    text: string
+  }
+
+export interface IQuranVerseWithTranslations extends IQuranVerse {
+    translations: IQuranVerseTranslation[]
+}
+
 export interface IQuranWord {
     id: number
     position: number
@@ -26,11 +36,11 @@ export interface IQuranWord {
     page_number: number
     line_number: number
     text: string
-    translation: IQuranTranslation
+    translation: IQuranWordTranslation
     transliteration: IQuranTransliteration
 }
 
-export interface IQuranTranslation {
+export interface IQuranWordTranslation {
     text: string
     language_name: string
 }
@@ -70,7 +80,7 @@ export interface ITranslatedName {
     name: string
 }
 
-export interface IJuzeVerse {
+export interface IJuzVerse {
     id: number
     verse_number: number
     verse_key: string
@@ -84,5 +94,9 @@ export interface IJuzeVerse {
 }
 
 export interface IJuzInfoResponse {
-    verses: IJuzeVerse[]
+    verses: IJuzVerse[]
+}
+
+export interface IRandomVerseResponse {
+    verse: IQuranVerseWithTranslations
 }

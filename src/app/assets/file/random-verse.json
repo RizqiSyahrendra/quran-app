@@ -1,0 +1,149 @@
+{
+  "verse": {
+    "id": 4430,
+    "verse_number": 16,
+    "verse_key": "44:16",
+    "hizb_number": 50,
+    "rub_el_hizb_number": 198,
+    "ruku_number": 433,
+    "manzil_number": 6,
+    "sajdah_number": null,
+    "page_number": 496,
+    "juz_number": 25,
+    "words": [
+      {
+        "id": 18106,
+        "position": 1,
+        "audio_url": "wbw/044_016_001.mp3",
+        "char_type_name": "word",
+        "text_indopak": "يَوۡمَ",
+        "page_number": 496,
+        "line_number": 13,
+        "text": "يَوۡمَ",
+        "translation": {
+          "text": "(The) Day",
+          "language_name": "english"
+        },
+        "transliteration": {
+          "text": "yawma",
+          "language_name": "english"
+        }
+      },
+      {
+        "id": 18108,
+        "position": 3,
+        "audio_url": "wbw/044_016_003.mp3",
+        "char_type_name": "word",
+        "text_indopak": "الۡبَطۡشَةَ",
+        "page_number": 496,
+        "line_number": 13,
+        "text": "الۡبَطۡشَةَ",
+        "translation": {
+          "text": "(with) the seizure",
+          "language_name": "english"
+        },
+        "transliteration": {
+          "text": "l-baṭshata",
+          "language_name": "english"
+        }
+      },
+      {
+        "id": 18107,
+        "position": 2,
+        "audio_url": "wbw/044_016_002.mp3",
+        "char_type_name": "word",
+        "text_indopak": "نَبۡطِشُ",
+        "page_number": 496,
+        "line_number": 13,
+        "text": "نَبۡطِشُ",
+        "translation": {
+          "text": "We will seize",
+          "language_name": "english"
+        },
+        "transliteration": {
+          "text": "nabṭishu",
+          "language_name": "english"
+        }
+      },
+      {
+        "id": 18109,
+        "position": 4,
+        "audio_url": "wbw/044_016_004.mp3",
+        "char_type_name": "word",
+        "text_indopak": "الۡكُبۡـرٰى​ۚ",
+        "page_number": 496,
+        "line_number": 13,
+        "text": "الۡكُبۡـرٰى​ۚ",
+        "translation": {
+          "text": "the greatest",
+          "language_name": "english"
+        },
+        "transliteration": {
+          "text": "l-kub'rā",
+          "language_name": "english"
+        }
+      },
+      {
+        "id": 18112,
+        "position": 7,
+        "audio_url": null,
+        "char_type_name": "end",
+        "text_indopak": "١٦",
+        "page_number": 496,
+        "line_number": 14,
+        "text": "١٦",
+        "translation": {
+          "text": "(16)",
+          "language_name": "english"
+        },
+        "transliteration": {
+          "text": null,
+          "language_name": "english"
+        }
+      },
+      {
+        "id": 18110,
+        "position": 5,
+        "audio_url": "wbw/044_016_005.mp3",
+        "char_type_name": "word",
+        "text_indopak": "اِنَّا",
+        "page_number": 496,
+        "line_number": 13,
+        "text": "اِنَّا",
+        "translation": {
+          "text": "indeed, We",
+          "language_name": "english"
+        },
+        "transliteration": {
+          "text": "innā",
+          "language_name": "english"
+        }
+      },
+      {
+        "id": 18111,
+        "position": 6,
+        "audio_url": "wbw/044_016_006.mp3",
+        "char_type_name": "word",
+        "text_indopak": "مُنۡتَقِمُوۡنَ‏",
+        "page_number": 496,
+        "line_number": 13,
+        "text": "مُنۡتَقِمُوۡنَ‏",
+        "translation": {
+          "text": "(will) take retribution",
+          "language_name": "english"
+        },
+        "transliteration": {
+          "text": "muntaqimūna",
+          "language_name": "english"
+        }
+      }
+    ],
+    "translations": [
+      {
+        "id": 178922,
+        "resource_id": 33,
+        "text": "(Ingatlah) pada hari (ketika) Kami menghantam mereka dengan keras.<sup foot_note=135746>1</sup> Kami pasti memberi balasan."
+      }
+    ]
+  }
+}

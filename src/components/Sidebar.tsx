@@ -35,11 +35,6 @@ export default function Sidebar() {
                     img={{ src: IconComponent.lampSvg }}
                     href={routeNames("todays_verse")}
                 />
-                <SidebarItem
-                    title="Tersimpan"
-                    img={{ src: IconComponent.bookmarkSvg }}
-                    href={routeNames("bookmark")}
-                />
             </List>
         </Card>
     );

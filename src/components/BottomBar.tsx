@@ -21,10 +21,6 @@ export default function BottomBar() {
                     img={{ src: IconComponent.lampSvg }}
                     href={routeNames("todays_verse")}
                 />
-                <BottomBarItem
-                    img={{ src: IconComponent.bookmarkSvg }}
-                    href={routeNames("bookmark")}
-                />
             </div>
         </div>
     );
