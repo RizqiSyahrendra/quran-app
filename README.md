@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quran App
+A web based app to read Qur'an everywhere as long as there is internet connection.
 
-## Getting Started
+## Motivation
+There's no any special motivation. I created this project for personal use.
 
-First, run the development server:
+## Features
+- Read Qur'an
+- Mark latest read
+- Daily random verse
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Tech Stack
+- Next.js 14
+
+## Installation  
+Create environment file based on provided example.
+```sh
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Without Docker 
+*Next.js 14 requires Node.js 18.17 (minimum), so make sure it's installed in your operating system.*  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies.
+```sh
+yarn
+```  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run as development.
+```sh
+yarn dev
+```
 
-## Learn More
+Build as production.
+```sh
+yarn build
+```  
 
-To learn more about Next.js, take a look at the following resources:
+Run as production.
+```sh
+yarn start
+```  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## With Docker  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Run as development.
+```sh
+docker compose up
+```  
 
-## Deploy on Vercel
+Run as production.
+```sh
+docker compose -f ./docker-compose.production.yml up -d
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tests
+```sh
+yarn test
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Credits
+- Design inspiration and asset is from [Quran App Concept](https://www.figma.com/community/file/966921639679380402)  
+- Qur'an API is from [Quran.com v4 api](https://quran.api-docs.io/v4/getting-started/introduction)

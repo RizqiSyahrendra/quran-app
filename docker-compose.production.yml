@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   app:
-    image: registry.gitlab.com/rizqisyahrendra/quran-app
+    image: quran-app
     build: 
       dockerfile: ./Dockerfile.production
     ports:
