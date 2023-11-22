@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# additional
+src/app/assets/file/random-verse.json
+src/app/assets/file/chapters.json
