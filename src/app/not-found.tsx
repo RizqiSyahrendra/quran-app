@@ -19,7 +19,7 @@ export default function NotFound() {
                     />
                 </div>
                 <div className="flex justify-center">
-                    <Link href={routeNames("home")} className="bg-warning" passHref legacyBehavior replace>
+                    <Link href={routeNames("home")} className="bg-warning" legacyBehavior replace prefetch={false}>
                         <Button className="bg-warning text-button-font1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full">
                             Kembali
                         </Button>

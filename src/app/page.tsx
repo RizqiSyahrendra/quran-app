@@ -22,13 +22,11 @@ export default function Landing() {
                         height={450 - 80}
                     />
                 </div>
-                <div className="flex justify-center">
-                    <Link href={routeNames("home")} className="bg-warning" passHref legacyBehavior replace>
-                        <Button className="bg-warning text-button-font1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full">
-                            Mulai
-                        </Button>
-                    </Link>
-                </div>
+                <Link href={routeNames("home")} className="bg-warning" legacyBehavior prefetch={false}>
+                    <Button className="bg-warning text-button-font1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full">
+                        Mulai
+                    </Button>
+                </Link>
             </div>
         </main>
     )

@@ -55,7 +55,7 @@ export default function Banner() {
                         Ayat no: {ayatNum}
                     </div>
                     <div className="mt-2">
-                        <Link href={routeNames("read", {startPage: page})}>
+                        <Link href={routeNames("read", {startPage: page})} prefetch={false}>
                             <Button className="bg-info" size="sm">
                                 Lanjutkan
                             </Button>
