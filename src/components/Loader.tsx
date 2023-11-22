@@ -15,10 +15,10 @@ export default function Loader(props: ILoaderProps) {
     if (useContainer) {
         return (
             <div className="flex justify-center">
-                <Spinner className={`text-blue-500/10 ${className}`} />
+                <Spinner className={`text-loader ${className}`} />
             </div>
         );
     }
 
-    return <Spinner className={`text-blue-500/10 ${className}`} />;
+    return <Spinner className={`text-loader ${className}`} />;
 }
