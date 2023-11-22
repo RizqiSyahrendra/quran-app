@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: "IndoPak";
   src: url("../../public/assets/fonts/indopak-nastaleeq.woff2") format("opentype");
 }
 @font-face {
   font-family: "Lpmq";
   src: url("../../public/assets/fonts/lpmq.ttf") format("opentype");
-}
+} */
 
 @layer base {
   :root {

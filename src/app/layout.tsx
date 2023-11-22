@@ -1,8 +1,19 @@
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import localFont from 'next/font/local'
 import Providers from './providers'
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
+const indoPak = localFont({
+  src: './assets/fonts/indopak-nastaleeq.woff2',
+  display: 'swap',
+  variable: '--font-indopak',
+});
+
+const lpmq = localFont({
+  src: './assets/fonts/lpmq.ttf',
+  display: 'swap',
+  variable: '--font-lpmq',
+});
+
 
 export const metadata = {
   title: 'Qur\'an App',
@@ -16,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} theme-dark bg-primary`}>
+      <body className={`${indoPak.variable} ${lpmq.variable} theme-dark bg-primary`}>
         <Providers>
           {children}
         </Providers>

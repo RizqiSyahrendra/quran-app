@@ -11,8 +11,8 @@ const tailwindConfig = {
   theme: {
     extend: {
       fontFamily: {
-        quranIndopak: "IndoPak",
-        quranLpmq: "Lpmq",
+        quranIndopak: ['var(--font-indopak)'],
+        quranLpmq: ['var(--font-lpmq)'],
       },
       colors: {
         "primary": "var(--color-primary)",

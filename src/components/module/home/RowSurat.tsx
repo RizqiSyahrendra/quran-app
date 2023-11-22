@@ -29,7 +29,7 @@ export default function RowSurat(props: IRowSuratProps) {
                     </div>
                 </div>
             </div>
-            <div className="flex items-center font-bold text-font-info text-lg">
+            <div className="flex items-center font-bold text-font-info text-2xl font-quranIndopak">
                 {namaArabic}
             </div>
         </div>
