@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import fs from "fs";
 import { IChaptersResponse, IRandomVerseResponse } from "@/utils/api/api.types";
 import { api } from "@/utils/api/api";
