@@ -1,6 +1,6 @@
 import { IChaptersResponse, IJuzInfoResponse, IQuranPageResponse } from "./api.types";
 
-const host = "https://api.quran.com/api/v4";
+const host = process.env.NEXT_PUBLIC_API_HOST;
 
 export const api = {
 
