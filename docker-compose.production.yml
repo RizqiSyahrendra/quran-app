@@ -9,4 +9,4 @@ services:
       - 3000:3000
     volumes: 
       - ./public:/app/public
-      - ./src:/apps/src
+      - ./src/app/assets:/app/src/app/assets
