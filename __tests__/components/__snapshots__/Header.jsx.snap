@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header render Header unchanged 1`] = `
+<div>
+  <div
+    class="flex pt-2 pb-3 mb-4 text-xl text-header-font font-bold "
+  >
+    <img
+      alt="back"
+      class="self-center mr-4 cursor-pointer"
+      data-nimg="1"
+      decoding="async"
+      height="24"
+      loading="lazy"
+      src="/_next/image?url=%2Fassets%2Ficons%2Fback.png&w=48&q=100"
+      srcset="/_next/image?url=%2Fassets%2Ficons%2Fback.png&w=32&q=100 1x, /_next/image?url=%2Fassets%2Ficons%2Fback.png&w=48&q=100 2x"
+      style="color: transparent;"
+      width="24"
+    />
+    <div />
+  </div>
+</div>
+`;
