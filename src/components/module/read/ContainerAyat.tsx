@@ -11,7 +11,7 @@ import { IAyatData, IAyatProps } from "./Ayat.types";
 import ContextMenuBar from "@/components/ContextMenuBar";
 import { IContextMenuBarProps } from "@/components/ContextMenuBar.types";
 import { useRecoilState } from "recoil";
-import { latestReadState } from "@/utils/atoms/latestReadState";
+import { latestReadState } from "@/utils/store/latestReadState";
 
 export default function ContainerAyat(props: IContainerAyatProps) {
     const {

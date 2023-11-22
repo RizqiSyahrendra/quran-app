@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/material";
-import { latestReadState } from "@/utils/atoms/latestReadState";
+import { latestReadState } from "@/utils/store/latestReadState";
 import { useRecoilStateWrapper } from "@/utils/hooks/useRecoilStateWrapper";
 import { IconRegistry, ImageRegistry } from "@/utils/image";
 import { routeNames } from "@/utils/routes";

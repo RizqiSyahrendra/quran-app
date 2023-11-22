@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import { chaptersState } from "@/utils/atoms/chaptersState";
+import { chaptersState } from "@/utils/store/chaptersState";
 import { api } from "@/utils/api/api";
 
 export function useChaptersData() {

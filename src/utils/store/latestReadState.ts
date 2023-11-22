@@ -1,8 +1,6 @@
 import { atom } from "recoil";
 import { ILatestReadState } from "./latestReadState.types";
-import { recoilPersist } from "recoil-persist";
-
-const { persistAtom } = recoilPersist();
+import persistAtom from "./persist";
 
 export const latestReadState = atom<ILatestReadState | null>({
     key: 'latestReadState',

@@ -1,8 +1,6 @@
 import { atom } from "recoil";
 import { IChaptersState } from "./chaptersState.types";
-import { recoilPersist } from "recoil-persist";
-
-const { persistAtom } = recoilPersist();
+import persistAtom from "./persist";
 
 export const chaptersState = atom<IChaptersState>({
     key: 'chaptersState',
