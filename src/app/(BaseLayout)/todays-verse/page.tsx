@@ -17,7 +17,7 @@ export default async function TodaysVerse() {
             <div className="mt-20 text-xl font-bold text-center">
                 {chapter?.name_simple} : {randomVerse?.verse_number}
             </div>
-            <div className="mt-10 text-center space-x-1" dir="rtl">
+            <div className="mt-10 flex flex-1 flex-wrap" dir="rtl">
                 {!!randomVerse && randomVerse.words.map((word, wordIdx) => {
                     return (
                         <Ayat
