@@ -9,7 +9,7 @@ WORKDIR /app
 # Install dependencies
 COPY package.json yarn.lock* ./
 RUN \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile --production && yarn add sharp; \
   else echo "Lockfile not found." && exit 1; \
   fi
 
@@ -28,7 +28,10 @@ COPY . .
 # RUN yarn build
 
 # If using npm comment out above and use below instead
-RUN npm run build
+RUN \
+  NEXT_PUBLIC_API_HOST=APP_NEXT_PUBLIC_API_HOST \
+  NEXT_PUBLIC_STORAGE_KEY=APP_NEXT_PUBLIC_STORAGE_KEY \
+  yarn build
 
 # Production image, copy all the files and run next
 FROM base AS runner
@@ -48,7 +51,12 @@ COPY --from=builder /app/src/app/assets ./src/app/assets
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/entrypoint.sh ./entrypoint.sh
 
 USER nextjs
+
+# Permisions to execute script
+RUN ["chmod", "+x", "./entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
 
 CMD ["node", "server.js"]
