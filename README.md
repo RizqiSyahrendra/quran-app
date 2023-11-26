@@ -10,7 +10,9 @@ There's no any special motivation. I created this project for personal use.
 - Daily random verse
 
 ## Tech Stack
-- Next.js 14
+- [Next.js](https://github.com/vercel/next.js)
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)  
+- [Material Tailwind](https://github.com/creativetimofficial/material-tailwind)
 
 ## Installation  
 Create environment file based on provided example.
