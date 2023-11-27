@@ -6,7 +6,7 @@ A web based app to read Qur'an everywhere as long as there is internet connectio
 <img src="screenshot/home.png" width="400">  
 
 ## Motivation
-There's no any special motivation. I created this project for personal use.
+There's no any special motivation. I created this project for personal use, but feel free to use it as well if you want.
 
 ## Features
 - Read Qur'an
