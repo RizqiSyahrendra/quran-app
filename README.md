@@ -1,6 +1,10 @@
 # Quran App
 A web based app to read Qur'an everywhere as long as there is internet connection.
 
+## Screenshot
+<img src="screenshot/landing.png" width="350">
+<img src="screenshot/home.png" width="350">  
+
 ## Motivation
 There's no any special motivation. I created this project for personal use.
 
