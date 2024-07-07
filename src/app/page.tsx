@@ -23,7 +23,7 @@ export default function Landing() {
                     />
                 </div>
                 <Link href={routeNames("home")} className="bg-warning" legacyBehavior prefetch={false}>
-                    <Button className="bg-warning text-button-font1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full">
+                    <Button data-testid="btn-start" className="bg-warning text-button-font1 -mt-4 md:mt-8 rounded-full w-1/2 md:w-full">
                         Mulai
                     </Button>
                 </Link>
